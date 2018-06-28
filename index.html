@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web商城</title>
+    <link rel="shortcut icon" href="icons/favicon.ico" />
+    <!--<link href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">-->
+    <!--<script src="https://cdn.bootcss.com/jquery/2.1.1/jquery.min.js"></script>-->
+    <!--<script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>-->
+    <script src="js/jquery.min.js"></script>
+    <script src="bootstrap-3.3.7-dist/js/bootstrap.min.js"></script>
+    <link href="bootstrap-3.3.7-dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="CSS/style.css">
+    <script src="js/index.js"></script>
+</head>
+<body style="padding-top: 55px;">
+<div class="container">
+    <!--顶部导航条-->
+    <nav class="navbar navbar-default navbar-fixed-top" role="navigation" style="background:rgba(255,255,240,0.4);">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-xs-2 col-sm-2" align="center">
+                    <ul class="nav navbar-nav navbar-left">
+                        <li><a href="#"><span class="glyphicon glyphicon-chevron-left"></span></a></li>
+                    </ul>
+                </div>
+                <div class="col-xs-8 col-sm-8" align="center">
+                    <form class="navbar-form" role="search" style="padding: 0px; border: 0px;">
+                        <div class="input-group form-group">
+                            <input type="text" class="form-control" placeholder="搜索"/>
+                            <span class="input-group-btn">
+                                <button type="submit" class="btn btn-default">
+                                    <span class="glyphicon glyphicon-search"></span>
+                                </button>
+                            </span>
+                        </div>
+                    </form>
+                </div>
+                <div class="col-xs-2 col-sm-2" align="center">
+                    <ul class="nav navbar-nav navbar-right">
+                        <li><a href="#"><span class="glyphicon glyphicon-envelope"></span></a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- 轮播广告 -->
+    <div class="carousel slide divtop" id="myCarousel" data-ride="carousel" data-interval="2000" data-wrap="true">
+        <ol class="carousel-indicators" id="indicators"></ol>
+        <div class="carousel-inner" id="ad"></div>
+        <a href="#myCarousel" class="left carousel-control" role="button" data-slide="prev">
+            <span class="glyphicon glyphicon-chevron-left"></span>
+        </a>
+        <a href="#myCarousel" class="right carousel-control" data-slide="next">
+            <span class="glyphicon glyphicon-chevron-right"></span>
+        </a>
+    </div>
+
+    <!-- 功能快捷链接 -->
+    <div class="row funcbar">
+        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+            <ul>
+                <li><a href="temp_page.html"><span><img src="icons/f1.ico"/></span><span>领券</span></a></li>
+                <li><a href="temp_page.html"><span><img src="icons/f2.ico"/></span><span>签到</span></a></li>
+                <li><a href="temp_page.html"><span><img src="icons/f3.ico"/></span><span>会员权益</span></a></li>
+                <li><a href="temp_page.html"><span><img src="icons/f4.ico"/></span><span>充值缴费</span></a></li>
+                <li><a href="temp_page.html"><span><img src="icons/f5.ico"/></span><span>免费体验</span></a></li>
+                <li><a href="temp_page.html"><span><img src="icons/f6.ico"/></span><span>品质二手</span></a></li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- 今日优惠 -->
+    <div class="row">
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <h3 class="panel-title ">
+                    <span class="glyphicon glyphicon-gift" style="color: rgb(255, 140, 60);">今日优惠</span>
+                </h3>
+            </div>
+            <div class="panel-body" id="discount"></div>
+        </div>
+    </div>
+
+    <!--底部固定导航-->
+    <div class="row navbar-fixed-bottom fnav">
+        <div class="col-sm-3 col-xs-3"><a href="index.html" class="btn btn-block"><span class="glyphicon glyphicon-home"></span><span>首页</span></a></div>
+        <div class="col-sm-3 col-xs-3"><a href="goodslist.html" class="btn btn-block"><span class="glyphicon glyphicon-th-large"></span><span>商品</span></a></div>
+        <div class="col-sm-3 col-xs-3"><a href="cart.html" class="btn btn-block"><span class="glyphicon glyphicon-shopping-cart"></span><span>购物车</span></a></div>
+        <div class="col-sm-3 col-xs-3"><a href="user.html" class="btn btn-block"><span class="glyphicon glyphicon-user"></span><span>我的</span></a></div>
+    </div>
+</div>
+
+<script type="text/javascript">
+    $(function() {//页面加载之后执行
+        loadAd();
+        loadDiscount();
+    });
+</script>
+</body>
+</html>

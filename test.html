@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test</title>
+    <!-- Bootstrap 核心 CSS 文件 -->
+    <link href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+    <!-- jQuery文件。务必在bootstrap.min.js 之前引入 -->
+    <script src="https://cdn.bootcss.com/jquery/2.1.1/jquery.min.js"></script>
+    <!-- Bootstrap 核心 JavaScript 文件 -->
+    <script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <!--加减数量插件-->
+    <link rel="stylesheet" href="CSS/jquery.spinner.css">
+    <script src="js/jquery.spinner.js"></script>
+    <style type="text/css">
+        #price{
+            text-decoration: line-through;
+            color: gray;
+        }
+        #dprice{
+            font-weight: bold;
+            color: red;
+        }
+        #descr{
+            color: lightgray;
+        }
+        #cart_descr{
+            color: lightgray;
+        }
+        #cart_price{
+            color: gray;
+        }
+        #cart_total{
+            font-weight: bold;
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!--今日优惠条目-->
+        <div class="row">
+            <div class="col-xs-4 col-sm-4 col-md-4"><img src="images/test.jpg" class="img-responsive"></div>
+            <div class="col-xs-8 col-sm-8 col-md-8" style="line-height:200%">
+                <div class="row">
+                    <div class="col-xs-12 col-sm-12 col-md-12">名称</div>
+                </div>
+                <div class="row">
+                    <div class="col-xs-12 col-sm-12 col-md-12" id="descr">描述</div>
+                </div>
+                <div class="row">
+                   <div class="col-xs-6 col-sm-6 col-md-6" id="price">原价998</div>
+                   <div class="col-xs-6 col-sm-6 col-md-6" id="dprice">现价0.5</div>
+                </div>
+            </div>
+        </div>
+        <hr/>
+        <!--商品条目-->
+        <div class="row">
+            <div class="col-xs-6 col-sm-6 col-md-6">
+                <a href="index.html" style="color: black">
+                    <div class="thumbnail">
+                        <img src="images/test.jpg" class="img-responsive"/>
+                        <div class="caption">
+                            <h4>商品名称</h4>
+                            <div class="row">
+                                <div class="col-xs-6 col-sm-6 col-md-6" style="color: red;">￥商品价格</div>
+                                <div class="col-xs-6 col-sm-6 col-md-6" align="end">
+                                    <a href="#" class="btn glyphicon glyphicon-plus-sign"
+                                    onclick="addToCart()" style="color: red;"></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+            </div>
+        </div>
+        <hr/>
+
+        <!--购物车条目-->
+        <div class="row">
+            <div class="col-xs-12 col-sm-12 col-md-12">
+                <div class="row">
+                    <div class="col-xs-4 col-sm-4 col-md-4"><img src="images/test.jpg" class="img-responsive"></div>
+                    <div class="col-xs-8 col-sm-8 col-md-8" style="line-height:200%">
+                        <div class="row">
+                            <div class="col-xs-12 col-sm-12 col-md-12">名称</div>
+                        </div>
+                        <div class="row">
+                            <div class="col-xs-12 col-sm-12 col-md-12 " id="cart_descr">描述</div>
+                        </div>
+                        <div class="row">
+                            <div class="col-xs-6 col-sm-6 col-md-6" id="cart_price">价格</div>
+                            <div class="col-xs-6 col-sm-6 col-md-6" id="cart_total">合计</div>
+                        </div>
+                        <div class="row">
+                            <div class="col-xs-6 col-sm-6 col-md-6">
+                                <input type="text" class="spinner"/>
+                            </div>
+                            <div class="col-xs-6 col-sm-6 col-md-6">
+                                <a class="btn" onclick="" style="color: black"><span class="glyphicon glyphicon-trash"></span></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row" align="end">
+                    <button class="btn btn-lg">提交</button>
+                </div>
+                <hr/>
+            </div>
+        </div>
+    </div>
+    <script type="text/javascript">
+        $('.spinner').spinner();
+    </script>
+</body>
+</html>

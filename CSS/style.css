@@ -1,0 +1,85 @@
+body{
+    /*padding-top: 50px;*/
+    padding-bottom: 50px;
+}
+.funcbar ul{
+    list-style: none;
+}
+.funcbar ul li{
+    float: left;
+    width: 25%;
+    text-align: center;
+    list-style-type: none;
+    margin: 0px;
+    padding: 0px;
+}
+.funcbar ul li span{
+    display: block;
+    color: gray;
+    font-size: 14px;
+    font-family: "微软雅黑";
+    line-height: 22px;
+}
+.funcbar img{
+    width: 48px;
+    height:48px;
+}
+.fnav{
+    background-color:#fff;
+    border:1px double gray;
+    text-align: center;
+}
+.fnav a{
+    color:gray;
+    font-size: 10px;
+}
+.fnav span{
+    display: block;
+    line-height: 18px;
+}
+.price{
+    text-decoration: line-through;
+    color: gray;
+}
+.dprice{
+    font-weight: bold;
+    color: red;
+}
+.descr{
+    color: lightgray;
+}
+.discountText{
+    line-height: 200%;
+}
+.thumbnail{
+    text-overflow:ellipsis;
+}
+@media screen and (max-width: 640px){
+    .thumbnail{
+        height: 270px;
+    }
+}
+.cart_descr{
+    color: lightgray;
+}
+.cart_price{
+    color: gray;
+}
+.cart_itemTotal{
+    font-weight: bold;
+    color: red;
+}
+/*由于轮播图片尺寸不统一，这里针对不同设备限制图片的高度，宽度统一为100%*/
+#ad img{
+    width: 100%;
+}
+@media screen and (max-width: 640px){
+    #ad img{
+        max-height: 190px;
+    }
+}
+@media screen and (max-width: 2000px){
+    #ad img{
+        height: 500px;
+    }
+}

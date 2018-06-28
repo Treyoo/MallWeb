@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>商品列表</title>
+    <script src="js/jquery.min.js"></script>
+    <script src="bootstrap-3.3.7-dist/js/bootstrap.min.js"></script>
+    <link href="bootstrap-3.3.7-dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="CSS/style.css">
+    <script src="js/goodslist.js"></script>
+</head>
+<body>
+<div class="container">
+    <div class="row">
+    <div class="panel panel-default">
+        <div class="panel-heading">
+            <h3 class="panel-title">
+                <span class="glyphicon glyphicon-th-large" style="color: rgb(255, 140, 60);">商品列表</span>
+            </h3>
+        </div>
+        <!--商品条目-->
+        <div class="panel-body" id="goodslist"></div>
+    </div>
+</div>
+</div>
+
+<!--底部固定导航-->
+<div class="row navbar-fixed-bottom fnav">
+    <div class="col-sm-3 col-xs-3">
+        <a href="index.html" class="btn btn-block">
+            <span class="glyphicon glyphicon-home"></span><span>首页</span>
+        </a>
+    </div>
+    <div class="col-sm-3 col-xs-3">
+        <a href="goodslist.html" class="btn btn-block">
+            <span class="glyphicon glyphicon-th-large"></span><span>商品</span>
+        </a>
+    </div>
+    <div class="col-sm-3 col-xs-3">
+        <a href="cart.html" class="btn btn-block">
+            <span class="glyphicon glyphicon-shopping-cart"></span><span>购物车</span>
+        </a>
+    </div>
+    <div class="col-sm-3 col-xs-3">
+        <a href="user.html" class="btn btn-block">
+            <span class="glyphicon glyphicon-user"></span><span>我的</span>
+        </a>
+    </div>
+</div>
+
+<script type="text/javascript">
+    $(function(){
+        loadGoodsList();
+    });
+</script>
+</body>
+</html>
